@@ -1,7 +1,7 @@
 pipeline {
     agent {
-       label 'dev'
-}
+       label 'staging'
+          }
     stages {
             stage('approval') {
              steps { 
