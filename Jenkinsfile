@@ -1,6 +1,13 @@
 pipeline {
-    agent any
+    agent {
+      label 'staging'
+    }
     stages {
+           stage('approval') {
+             steps { 
+               input "Deploy to QA?"
+          }
+        }     
         stage('Restore packages'){
            steps{
                sh 'dotnet restore WebApplication.sln'
