@@ -4,6 +4,7 @@ pipeline {
         stage('Restore packages'){
            steps{
                sh 'dotnet restore WebApplication.sln'
+               sh ' echo "test message"'
             }
          }        
         stage('Clean'){
