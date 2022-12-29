@@ -1,5 +1,5 @@
 # ASP.NET
-- task: SonarQubeAnalyze@5
+
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
@@ -17,7 +17,7 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
-
+- task: SonarQubeAnalyze@5
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
